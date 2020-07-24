@@ -174,5 +174,7 @@ h1{
 
 
 /* 	F O O T E R 	*/
-
+.page-footer{
+	text-align:center;
+}
 /* E N D 	F O O T E R 	*/
