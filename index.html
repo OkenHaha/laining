@@ -3,6 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Take 2</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="icon.ico" type="image/ico">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -13,42 +15,16 @@
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<script type="text/javascript">
-		$(document).ready(function() {
-   $('.carousel').carousel({
-  interval: 3000
-})
-});
-	</script>
-	<script type="text/javascript">
-		// Regular map
-        function regular_map() {
-            var var_location = new google.maps.LatLng(24.7851307,93.9575913);
-
-            var var_mapoptions = {
-                center: var_location,
-                zoom: 14
-            };
-
-            var var_map = new google.maps.Map(document.getElementById("map-container"),
-                var_mapoptions);
-
-            var var_marker = new google.maps.Marker({
-                position: var_location,
-                map: var_map,
-                title: "Manipur"
-            });
-        }
-
-        // Initialize maps
-        google.maps.event.addDomListener(window, 'load', regular_map);
-
-	</script>
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="map.js"></script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#navbarResponsive"> 	
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top scrolling-navbar">
 				<div class="container">
-  				<a class="navbar-brand" href="">Laining Solution</a>
+  				<a class="navbar-brand" href="">
+  				<img src="logo.png" class="navbar-brand logo">
+  				Laining Solution
+  				</a>
   				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toogle" aria-controls="toogle" aria-expanded="false" aria-label="Toggle navigation">
     			<span class="navbar-toggler-icon"></span>
  				</button>
@@ -81,21 +57,21 @@
   <div class="overlay" id="home">
   <div class="carousel-inner">
     <div class="carousel-item active">
-    	<div class="carousel-caption d-none d-md-block">
+    	<div class="carousel-caption">
         <h5>First slide label</h5>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
       <img class="d-block w-100" src="bg.jpg">
     </div>
     <div class="carousel-item">
-    	<div class="carousel-caption d-none d-md-block">
+    	<div class="carousel-caption">
         <h5>Second slide label</h5>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
       <img class="d-block w-100" src="bg2.jpg">
     </div>
     <div class="carousel-item">
-    	<div class="carousel-caption d-none d-md-block">
+    	<div class="carousel-caption">
         <h5>Third slide label</h5>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
@@ -103,85 +79,19 @@
   </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="carousel-control-prev-icon prev" aria-hidden="true"></span>
   </a>
   <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="carousel-control-next-icon next" aria-hidden="true"></span>
   </a>
 </div>
 </div>
 <!-- E N D 	C A R O U S A L 	-->
 
 
-<!-- T E A M 	-->
-        <div class="team" id="team" data-aos-easing="linear"
-     data-aos-duration="500"data-aos="fade-up">
- <div class="container">
-    <h1 class="text-center">Our Team</h1>
-  <div class="row">
-   <div class="col-lg-3 col-md-3 col-sm-12 item">
-    <img src="random.jpg" class="img-fluid" alt="team">
-    <div class="des">
-      Sara
-     </div>
-    <span class="text-muted">Manager</span>
-   </div>
-   <div class="col-lg-3 col-md-3 col-sm-12 item">
-    <img src="random.jpg" class="img-fluid" alt="team">
-    <div class="des">
-       Chris
-     </div>
-    <span class="text-muted">S.enginner</span>
-   </div>
-   <div class="col-lg-3 col-md-3 col-sm-12 item">
-    <img src="random.jpg" class="img-fluid" alt="team">
-    <div class="des">
-      Layla 
-     </div>
-    <span class="text-muted">Front End Developer</span>
-   </div>
-   <div class="col-lg-3 col-md-3 col-sm-12 item">
-    <img src="random.jpg" class="img-fluid" alt="team">
-     <div class="des">
-      J.Jirard
-     </div>
-    <span class="text-muted">Team Manger</span>
-   </div>
-  </div>
- </div>
-</div>
-</div>
-
-<!-- E N D 	T E A M 	-->
-
-
-
 
 
 <hr class="my-5">
-
-<!--	A B O U T 	U S 	-->
-<div class="container-fluid abt-bg">
-        <div class="container" id="about">
-   <div class="about desc" data-aos-easing="linear"
-     data-aos-duration="500"data-aos="fade-up">
-    <h1 class="mb-5 font-weight-bold">About Us</h1>
-    <p>
-       ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-   </div>
-</div>
-</div>
-<!-- E N D 	A B O U T 	-->
-
-
-<hr class="my-5">
-
 <!-- P R O D U C T S 	-->
 
         <div id="products" data-aos-easing="linear"
@@ -224,6 +134,155 @@
 </div>
 
 <!-- E N D 	P R O D U C T S 	-->
+
+<hr class="my-5">
+
+<!--	A B O U T 	U S 	-->
+<div class="container-fluid abt-bg">
+        <div class="container" id="about">
+   <div class="about desc" data-aos-easing="linear"
+     data-aos-duration="500"data-aos="fade-up">
+    <h1 class="mb-5 font-weight-bold">About Us</h1>
+    <p>
+       ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+   </div>
+</div>
+</div>
+<!-- E N D 	A B O U T 	-->
+
+
+<hr class="my-5">
+
+<!-- T E A M 	-->
+
+<div class="team" id="team" data-aos-easing="linear"
+     data-aos-duration="500"data-aos="fade-up">
+	<div class="container my-3 py-5 text-center">
+		<div class="row mb-5">
+			<div class="col">
+				<h1>Our Team</h1>
+				<p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-3 col-md-6">
+				<div class="card">
+					<div class="card-body">
+						<img src="random.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+						<h3>Susan Williams</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<div class="d-flex flex-row justify-content-center">
+							<div class="p-4">
+								<a href="">
+									<i class="fa fa-facebook"></i>
+								</a>
+							</div>
+							<div class="p-4">
+								<a href="">
+									<i class="fa fa-twitter"></i>
+								</a>
+							</div>
+							<div class="p-4">
+								<a href="">
+									<i class="fa fa-instagram"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="card">
+					<div class="card-body">
+						<img src="random.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+						<h3>Susan Williams</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<div class="d-flex flex-row justify-content-center">
+							<div class="p-4">
+								<a href="">
+									<i class="fa fa-facebook"></i>
+								</a>
+							</div>
+							<div class="p-4">
+								<a href="">
+									<i class="fa fa-twitter"></i>
+								</a>
+							</div>
+							<div class="p-4">
+								<a href="">
+									<i class="fa fa-instagram"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="card">
+					<div class="card-body">
+						<img src="random.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+						<h3>Susan Williams</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<div class="d-flex flex-row justify-content-center">
+							<div class="p-4">
+								<a href="">
+									<i class="fa fa-facebook"></i>
+								</a>
+							</div>
+							<div class="p-4">
+								<a href="">
+									<i class="fa fa-twitter"></i>
+								</a>
+							</div>
+							<div class="p-4">
+								<a href="">
+									<i class="fa fa-instagram"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="card">
+					<div class="card-body">
+						<img src="random.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+						<h3>Susan Williams</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<div class="d-flex flex-row justify-content-center">
+							<div class="p-4">
+								<a href="">
+									<i class="fa fa-facebook"></i>
+								</a>
+							</div>
+							<div class="p-4">
+								<a href="">
+									<i class="fa fa-twitter"></i>
+								</a>
+							</div>
+							<div class="p-4">
+								<a href="">
+									<i class="fa fa-instagram"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- E N D 	T E A M 	-->
+
+
+
 <hr class="my-5">
 <!-- C O N T A C T -->
 
@@ -276,7 +335,7 @@
 
 
 <!-- F O O T E R 	-->
-<footer class="page-footer font-small cyan darken-3 justify-content-center">
+<footer class="page-footer font-small cyan darken-3">
   <div class="container-fluid bg-light">
       <div class="col-md-12 py-5">
         <div class="mb-5 flex-center">
@@ -325,12 +384,12 @@
 			{
 				scrollTop: $(hash).offset().top
 			},
-			S800
+			800
 			);
 		}
-	});
+	}); 
 	*/	
-	AOS.init(); 
+	AOS.init();
 </script>
 </body>
 </html>
